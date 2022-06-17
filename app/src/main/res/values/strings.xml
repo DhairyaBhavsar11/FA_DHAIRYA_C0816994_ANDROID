@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">FA_Dhairya_c0816994_Android</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="savebutton">Save place</string>
+    <string name="map_key" translatable="false">AIzaSyBNLRM1ncgW-Veo9luICk0B8w913FvF-TU</string>
+</resources>
