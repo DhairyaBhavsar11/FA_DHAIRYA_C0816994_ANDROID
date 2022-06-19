@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/data_list_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="All PLACE"
+        android:textColor="#fff"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="-1dp" />
+
+    <TextView
+        android:id="@+id/all_data_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/data_list_count"
+        android:layout_marginTop="-2dp"
+        android:layout_marginBottom="60dp"
+        android:padding="10dp"
+        android:textColor="#000" />
+
+    <ImageButton
+        android:id="@+id/add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/all_data_list"
+        app:srcCompat="@android:drawable/ic_menu_add"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/sync_btn"
+        android:layout_width="56dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/add_btn"
+        app:layout_constraintTop_toBottomOf="@+id/all_data_list"
+        app:srcCompat="@android:drawable/stat_notify_sync"
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:layout_editor_absoluteY="671dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

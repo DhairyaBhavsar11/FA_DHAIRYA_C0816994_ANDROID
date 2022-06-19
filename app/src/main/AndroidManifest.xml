@@ -21,12 +21,13 @@
         <activity android:name=".EditActivity" />
         <activity android:name=".ShowActivity" />
         <activity android:name=".AddActivity" />
+        <activity android:name=".MapsActivity"/>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/map_key" />
         <activity
-            android:name=".MapsActivity"
+            android:name=".Home"
             android:exported="true"
             android:label="@string/title_activity_maps">
             <intent-filter>

@@ -50,7 +50,7 @@ public class AddActivity extends AppCompatActivity {
                         ,longitude.getText().toString(),
                         title.getText().toString()));
 
-                Intent intent = new Intent( AddActivity.this,MapsActivity.class );
+                Intent intent = new Intent( AddActivity.this,Home.class );
                 startActivity(intent);
                 finish();
             }

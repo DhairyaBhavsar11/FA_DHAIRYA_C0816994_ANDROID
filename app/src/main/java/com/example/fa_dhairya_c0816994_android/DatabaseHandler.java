@@ -96,6 +96,35 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         database.close();
     }
 
+    public int getTotalCount(){
+        String query="SELECT * from "+Utils.TABLE_NAME;
+        SQLiteDatabase sqLiteDatabase=this.getReadableDatabase();
+        Cursor cursor=sqLiteDatabase.rawQuery(query,null);
+        return cursor.getCount();
+    }
+
+    public List<Place> getAlldatalist() {
+        List<Place> placeList = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        String getAll = "SELECT * FROM " + Utils.TABLE_NAME;
+        Cursor cursor = db.rawQuery(getAll, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                Place place = new Place();
+                place.setId(cursor.getInt(0));
+                place.setPlatitude(cursor.getString(1));
+                place.setPlongitude(cursor.getString(2));
+                place.setTitle(cursor.getString(3));
+            }
+            while (cursor.moveToNext());
+
+        }
+        db.close();
+        return placeList;
+    }
+
+
 
 
 
